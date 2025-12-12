@@ -21,8 +21,10 @@ landingPage /
 ├─ Assets /   
 |   ├─ CSS / 
 |   |   └─ style.css 
-|   └─ image /
-|       └─ image.png
+|   ├─ img /
+|   |   └─ image.png
+|   └─ JS /
+|       └─ script.js
 └─ index.html
 ```
 
