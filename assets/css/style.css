@@ -1,0 +1,142 @@
+/* =========================================================
+   Global CSS Variables (Design Tokens)
+   ========================================================= */
+:root {
+    /* Color palette */
+    --primary-color: #0A1128;
+    --secondary-color: #A7992B;
+    --tertiary-color: #E27B14;
+    --crimson-color: #dc143c;
+    --white-color: #FFF;
+
+    /* UI helpers */
+    --menu-border-color: #EEE;
+    --gap: 3rem;
+}
+
+/* =========================================================
+   CSS Reset (remove default browser spacing)
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+   Base HTML & Typography Settings
+   ========================================================= */
+html {
+    /* 1rem = 10px (based on 16px default) */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* 
+   Font references:
+   font-family: "Open Sans", sans-serif;
+   font-family: "Montserrat", sans-serif;
+*/
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+}
+
+/* =========================================================
+   Headings
+   ========================================================= */
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+h1 { font-size: 6rem; }
+h2 { font-size: 5.5rem; }
+h3 { font-size: 5rem; }
+h4 { font-size: 4.5rem; }
+h5 { font-size: 4rem; }
+h6 { font-size: 3.5rem; }
+
+/* =========================================================
+   Links
+   ========================================================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================
+   Background Utility Classes
+   ========================================================= */
+.main-bg {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.white-bg {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* =========================================================
+Layout Helpers
+========================================================= */
+.section {
+height: 100vh;
+}
+
+.main-content {
+max-width: 120rem;
+margin: 0 auto;
+padding: var(--gap);
+}
+
+/* =========================================================
+    Navigation menu
+========================================================= */
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-bottom: 0.3rem solid #eff;
+}
+
+div.menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.menu-flex h1 {
+    font-size: 2.3rem;
+}
+
+.menu-flex nav ul {
+    display: flex;
+    list-style: none;   
+}
+
+.menu-flex nav ul li {
+    margin: 2rem 2.5rem 2rem 0rem;
+    position: relative;
+}
+
+.menu-flex nav ul li::after {
+    content: "";
+    background-color: var(--crimson-color);
+    position: absolute;
+    left: 50%;
+    bottom: -0.2rem;
+    height: 0.2rem;
+    width: 0;
+    transition: all 800ms ease-in-out;
+}
+
+.menu-flex nav ul li:hover::after {
+    left: -0.2rem;
+    width: calc(100% + 0.4rem);
+}
