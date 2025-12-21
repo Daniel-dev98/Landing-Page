@@ -1,4 +1,23 @@
 /* =========================================================
+   Guidelines:
+   
+   For better navigation, use ctrl + f to search for the topics below
+
+   - Global CSS Variables
+   - CSS Reset
+   - Base HTML
+   - Headings
+   - Links
+   - Backgounds Utility Classes
+   - Layout Helpers
+   - Navigation Menu
+   - Section Intro
+
+   ========================================================= */
+
+
+
+/* =========================================================
    Global CSS Variables (Design Tokens)
    ========================================================= */
 :root {
@@ -8,6 +27,7 @@
     --tertiary-color: #E27B14;
     --crimson-color: #dc143c;
     --white-color: #FFF;
+    --spacing: 7rem;
 
     /* UI helpers */
     --menu-border-color: #EEE;
@@ -39,14 +59,16 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
+    line-height: 1.5;
 }
 
 /* =========================================================
    Headings
    ========================================================= */
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 h1 { font-size: 6rem; }
@@ -83,7 +105,7 @@ a {
 Layout Helpers
 ========================================================= */
 .section {
-height: 100vh;
+min-height: 100vh;
 }
 
 .main-content {
@@ -91,6 +113,8 @@ max-width: 120rem;
 margin: 0 auto;
 padding: var(--gap);
 }
+
+.spacing { min-height: var(--spacing); }
 
 /* =========================================================
     Navigation menu
@@ -101,6 +125,7 @@ padding: var(--gap);
     left: 0;
     top: 0;
     right: 0;
+    z-index: 10;
     border-bottom: 0.3rem solid #eff;
 }
 
@@ -108,7 +133,7 @@ div.menu-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 var(--gap);
 }
 
 .menu-flex h1 {
@@ -121,7 +146,7 @@ div.menu-flex {
 }
 
 .menu-flex nav ul li {
-    margin: 2rem 2.5rem 2rem 0rem;
+    margin: 2rem 0 2rem 2.5rem;
     position: relative;
 }
 
@@ -139,4 +164,40 @@ div.menu-flex {
 .menu-flex nav ul li:hover::after {
     left: -0.2rem;
     width: calc(100% + 0.4rem);
+}
+
+/* =========================================================
+    Section Intro
+========================================================= */
+
+.intro-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    min-height: calc(100vh - var(--spacing) - var(--gap) * 2);
+}
+
+
+
+.item-flex:first-child {
+    flex: 1 2 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.item-flex:last-child {
+    flex: 2 1 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-flex:last-child img {
+    width: 100%;
+    height: auto;
 }
