@@ -13,6 +13,11 @@
    - Navigation Menu
    - Intro Section 
    - Top 3 Section
+   - Gallery Section
+   - Work Section
+   - Princing Section
+   - Contact Section
+   - Footer
 
    ========================================================= */
 
@@ -232,7 +237,17 @@ div.menu-flex {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    gap: calc(var(--gap) * 2);
+    gap: calc(var(--gap) * 3);
+}
+
+.flex-heading-top {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: calc(var(--gap) / 2);
+}
+
+.flex-heading-top p {
+    font-style: italic;
 }
 
 .flex-top-body {
@@ -244,14 +259,20 @@ div.menu-flex {
     counter-reset: item-counter;
 }
 
-.flex-item-body {
+.flex-item-top {
     flex: 1 0 30rem;
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--gap);
+    gap: calc(var(--gap) * 2);
 }
 
-.flex-item-body h3::before {
+.flex-item-top h3 {
+    font-size: 3.5rem;
+    line-height: 0.8rem;
+    font-weight: 500;
+}
+
+.flex-item-top h3::before {
     counter-increment: item-counter;
     content: counter(item-counter);
     display: inline-block;
@@ -273,6 +294,16 @@ div.menu-flex {
     align-items: flex-start;
     min-height: 100vh;
     gap: calc(var(--gap) * 2);
+}
+
+.flex-heading-gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: calc(var(--gap) / 2);
+}
+
+.flex-heading-gallery p {
+    font-style: italic;
 }
 
 .flex-gallery-body {
@@ -301,3 +332,48 @@ div.menu-flex {
     transform: translate(-2%, 2%) scale(1.15) rotate(3deg);
 }
 
+/* =========================================================
+   Work Section
+========================================================= */
+ 
+.flex-work {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    gap: calc(var(--gap) * 4);
+}
+
+.flex-work-body {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-flow: row wrap;
+    gap: var(--gap);
+    counter-reset: item-counter;
+}
+
+.flex-item-work {
+    flex: 1 0 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: calc(var(--gap) * 2);
+}
+
+.flex-item-work h3 {
+    font-size: 3.5rem;
+    line-height: 0.8rem;
+    font-weight: 500;
+}
+
+.flex-item-work h3::before {
+    counter-increment: item-counter;
+    content: counter(item-counter);
+    display: inline-block;
+    margin-right: 2rem;
+    font-style: italic;
+    font-size: 9rem;
+    font-weight: 400;
+    transform: rotate(6deg);
+}
