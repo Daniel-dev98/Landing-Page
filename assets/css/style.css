@@ -261,3 +261,43 @@ div.menu-flex {
     font-weight: 500;
     transform: rotate(6deg);
 }
+
+/* =========================================================
+   Gallery Section
+========================================================= */
+
+.flex-gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    gap: calc(var(--gap) * 2);
+}
+
+.flex-gallery-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: calc(var(--gap) / 2);
+}
+
+.flex-item-img {
+    flex: 1 0 34rem;
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.flex-item-img img {
+    transition: all 400ms ease-in-out;
+}
+
+.flex-item-img img:hover {
+    transform: translate(-2%, 2%) scale(1.15) rotate(3deg);
+}
+
