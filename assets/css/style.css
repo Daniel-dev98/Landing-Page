@@ -226,3 +226,38 @@ div.menu-flex {
    Top 3 Section
 ========================================================= */
  
+.flex-top-3 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    gap: calc(var(--gap) * 2);
+}
+
+.flex-top-body {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-flow: row wrap;
+    gap: var(--gap);
+    counter-reset: item-counter;
+}
+
+.flex-item-body {
+    flex: 1 0 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap);
+}
+
+.flex-item-body h3::before {
+    counter-increment: item-counter;
+    content: counter(item-counter);
+    display: inline-block;
+    margin-right: 2rem;
+    font-style: italic;
+    font-size: 10rem;
+    font-weight: 500;
+    transform: rotate(6deg);
+}
