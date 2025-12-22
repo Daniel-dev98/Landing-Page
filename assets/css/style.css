@@ -33,10 +33,11 @@
     --tertiary-color: #E27B14;
     --crimson-color: #dc143c;
     --white-color: #FFF;
-    --spacing: 7rem;
-
+    
     /* UI helpers */
     --menu-border-color: #EEE;
+    --table-border-color: #EEE;
+    --spacing: 7rem;
     --gap: 3rem;
 }
 
@@ -46,6 +47,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
  
 /* =========================================================
@@ -315,7 +317,7 @@ div.menu-flex {
 }
 
 .flex-item-img {
-    flex: 1 0 34rem;
+    flex: 1 1 34rem;
     display: flex;
     gap: var(--gap);
     width: 100%;
@@ -376,4 +378,67 @@ div.menu-flex {
     font-size: 9rem;
     font-weight: 400;
     transform: rotate(6deg);
+}
+
+/* =========================================================
+   Princing Section
+========================================================= */
+
+.flex-pricing {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 64rem;
+    width: 100%;
+    text-align: center;
+    gap: calc(var(--gap) * 4);
+}
+
+.flex-heading-pricing {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap);
+}
+
+.container-pricing {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+
+}
+
+.container-pricing table {
+    min-width: 50rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.container-pricing table th, .container-pricing table td {
+    border: 0.2rem solid var(--table-border-color);
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+.container-pricing table td {
+    font-size: 2.5rem;
+}
+
+.container-pricing table caption {
+    text-align: start;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container-pricing table thead, .container-pricing table tfoot {
+    background-color: var(--table-border-color);
+}
+
+.container-pricing table tfoot tr td{
+    text-align: right;
+    font-weight: 800;
+    padding-right: 2rem;
 }
