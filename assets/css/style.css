@@ -559,4 +559,21 @@ div.menu-flex {
     border: 0.5rem solid var(--gray-color);
 }
 
+/* =========================================================
+   Footer
+========================================================= */
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.6rem;
+}
+
+.footer a, .footer .heart {
+    color: var(--crimson-color);
+}
+
+.footer .heart {
+    font-size: 2rem;
+}
 
