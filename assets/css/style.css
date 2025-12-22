@@ -11,7 +11,8 @@
    - Backgounds Utility Classes
    - Layout Helpers
    - Navigation Menu
-   - Section Intro
+   - Intro Section 
+   - Top 3 Section
 
    ========================================================= */
 
@@ -41,7 +42,7 @@
     margin: 0;
     padding: 0;
 }
-
+ 
 /* =========================================================
    Base HTML & Typography Settings
    ========================================================= */
@@ -111,7 +112,7 @@ min-height: 100vh;
 .main-content {
 max-width: 120rem;
 margin: 0 auto;
-padding: var(--gap);
+padding: calc(2.5 * var(--gap)) var(--gap);
 }
 
 .spacing { min-height: var(--spacing); }
@@ -167,7 +168,7 @@ div.menu-flex {
 }
 
 /* =========================================================
-    Section Intro
+    Intro Section
 ========================================================= */
 
 .intro-flex {
@@ -201,3 +202,27 @@ div.menu-flex {
     width: 100%;
     height: auto;
 }
+
+/* =========================================================
+    Jobs Section
+========================================================= */
+
+.flex-jobs {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 64rem;
+    gap: var(--gap);
+    text-align: center;
+}
+
+.flex-jobs h2 {
+    margin-bottom: var(--gap);
+}
+
+/* =========================================================
+   Top 3 Section
+========================================================= */
+ 
