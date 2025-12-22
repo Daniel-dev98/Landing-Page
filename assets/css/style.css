@@ -33,6 +33,7 @@
     --tertiary-color: #E27B14;
     --crimson-color: #dc143c;
     --white-color: #FFF;
+    --gray-color: #CCC;
     
     /* UI helpers */
     --menu-border-color: #EEE;
@@ -98,7 +99,7 @@ a {
    Background Utility Classes
    ========================================================= */
 .main-bg {
-    background-image: url(../img/main-bg.svg);
+    background-image: url(../img/main_bg.svg);
     background-size: cover;
     background-position: center center;
     color: var(--white-color);
@@ -442,3 +443,120 @@ div.menu-flex {
     font-weight: 800;
     padding-right: 2rem;
 }
+
+/* =========================================================
+   Princing Section
+========================================================= */
+
+.contact-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    min-height: calc(100vh - var(--spacing) - var(--gap) * 2);
+}
+
+
+/* text-flex contact */
+.item-flex-contact:first-child {
+    flex: 1 2 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    gap: calc(var(--gap) * 2);
+}
+
+
+/* Container image */
+.item-flex-contact:nth-child(2) {
+    flex: 2 1 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image */
+.item-flex-contact:nth-child(2) img {
+    width: 60%;
+    height: auto;
+}
+
+/* Container Forms */
+.item-flex-contact:nth-child(3){
+    width: 100%;
+}
+
+/* flex Forms */
+.item-flex-contact:nth-child(3) fieldset{
+    display: flex;
+    border: none;
+    flex-flow: row wrap;
+    gap: var(--gap);
+}
+
+/* table legend */
+.item-flex-contact:nth-child(3) fieldset legend {
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* flex table items */
+.item-flex-contact:nth-child(3) fieldset .form-group {
+    flex: 1 1 30rem;
+}
+
+.item-flex-contact:nth-child(3) fieldset .form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.item-flex-contact:nth-child(3) fieldset .form-group input,
+.item-flex-contact:nth-child(3) fieldset .form-group textarea {
+    width: 100%;
+    border: none;
+    background-color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 2.5rem;
+    outline: none;
+}
+
+/* effect input and textarea */
+.item-flex-contact:nth-child(3) fieldset .form-group input:focus,
+.item-flex-contact:nth-child(3) fieldset .form-group textarea:focus {
+    box-shadow: 0 0 1rem 0.5rem var(--crimson-color);
+    border: 0.1rem solid var(--crimson-color);
+}
+
+/* textarea with full width */
+.item-flex-contact:nth-child(3) fieldset .form-group:nth-child(5) {
+    flex: 1 1 100%;
+    width: 100%;
+} 
+
+/* Button position */
+.item-flex-contact:nth-child(3) fieldset .form-group:nth-child(6) {
+  text-align: right;
+}
+
+/* Button style */
+.item-flex-contact:nth-child(3) fieldset .form-group:nth-child(6) button {
+  border: 0.5rem solid var(--white-color);
+  color: var(--white-color);
+  padding: 1.5rem 2rem;
+  background: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.item-flex-contact:nth-child(3) fieldset .form-group:nth-child(6) button:hover {
+    background-color: var(--gray-color);
+    color: var(--primary-color);
+    border: 0.5rem solid var(--gray-color);
+}
+
+
